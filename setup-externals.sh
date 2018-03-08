@@ -20,3 +20,12 @@ echo "G4INSTALL: $G4INSTALL"
 echo "G4LIB:     $G4LIB"
 cd ${wd}
 
+# adding HepMC
+export HEPMC_PREFIX=/opt/HepMC
+
+# CRMC
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/G4CRMC/lib
+export DYLD_LIBRARY_PATH=${DYLD_LIBRARY_PATH}:/opt/G4CRMC/lib
+export CPATH=${CPATH}:/opt/G4CRMC/src
+export CPATH=${CPATH}:/usr/src/crmc/src
+export CRMC_CONFIG_FILE=/opt/G4CRMC/crmc.param
